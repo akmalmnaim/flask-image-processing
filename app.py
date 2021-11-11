@@ -61,7 +61,7 @@ def proses1():
         cv2.imwrite("/".join([target, 'result.jpg']),img_res)
 
     # forward to processing page
-    return redirect('/')
+    return render_template('proses.html', data=data)
 
 # retrieve file from 'static/images' directory
 @app.route('/static/images/<filename>')
